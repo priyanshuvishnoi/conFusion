@@ -48,8 +48,11 @@
             your culinary senses!
           </p>
         </div>
-        <div class="col-12 col-sm align-self-center">
+        <div class="col-12 col-sm-3 align-self-center">
           <img src="img/logo.png" class="img-fluid">
+        </div>
+        <div class="col-12 col-sm-3 align-self-center">
+          <a href="#reserveForm"><button class="btn" style="background-color: #ffc400; width: 190px;">Reserve Table</button></a>
         </div>
       </div>
     </div>
@@ -64,8 +67,9 @@
         <div class="media">
           <img src="img/uthappizza.png" alt="uthappizza" class="d-flex mr-3 img-thumbnail align-self-center">
           <div class="media-body">
-            <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary">$4.99</span></h2>
-            <p>
+            <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span><span
+                class="badge badge-pill badge-secondary">$4.99</span></h2>
+            <p class="d-none d-sm-block">
               A unique combination of Indian Uthappam (pancake) and Italian pizza,
               topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia
               onion, Guntur chillies and Buffalo Paneer.
@@ -82,13 +86,18 @@
         <h3>This Month's Promotions</h3>
       </div>
       <div class="col col-sm col-md">
-        <h2>Weekend Grand Buffet</h2>
-        <p>
-          Featuring mouthwatering combinations with a choice of five different
-          salads, six enticing appetizers, six main entrees and five choicest
-          desserts. Free flowing bubbly and soft drinks. All for just $19.99
-          per person
-        </p>
+        <div class="media">
+          <img src="img/buffet.png" alt="buffet" class="d-flex mr-3 img-thumbnail align-self-center order-sm-last">
+          <div class="media-body">
+            <h2 class="mt-0">Weekend Grand Buffet<span class="badge badge-danger">NEW</span></h2>
+          <p class="d-none d-sm-block">
+            Featuring mouthwatering combinations with a choice of five different
+            salads, six enticing appetizers, six main entrees and five choicest
+            desserts. Free flowing bubbly and soft drinks. All for just $19.99
+            per person
+          </p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -102,7 +111,7 @@
           <div class="media-body">
             <h2 class="mt-0">Alberto Somayya</h2>
             <h4>Executive Chef</h4>
-            <p>
+            <p class="d-none d-sm-block">
               Award winning three-star Michelin chef with wide International
               experience having worked closely with whos-who in the culinary
               world, he specializes in creating mouthwatering Indo-Italian fusion
@@ -113,6 +122,43 @@
 
       </div>
     </div>
+    <div class="row row-content justify-content-center" id="reserveForm">
+      <div class="col-12 col-sm-8">
+        <div class="card">
+          <h3 class="card-header text-white" style="background-color: #ffc400">Reserve a Table</h3>
+          <div class="card-body">
+            <form>
+              <div class="form-group row">
+                <label for="radio" class="col-12 col-md-2 col-form-label">Number of Guests</label>
+                <div class="col-12 col-md-10">
+                  <input class="col-1" type="radio" name="radio" id="radio">1
+                  <input class="col-1" type="radio" name="radio" id="radio">2
+                  <input class="col-1" type="radio" name="radio" id="radio">3
+                  <input class="col-1" type="radio" name="radio" id="radio">4
+                  <input class="col-1" type="radio" name="radio" id="radio">5
+                  <input class="col-1" type="radio" name="radio" id="radio">6
+                </div>
+              </div>
+              <div class="form-group row mt-4">
+                <label for="datetime" class="col-12 col-md-2 col-form-label">Date and Time</label>
+                <div class="col-12 col-md-4">
+                  <input class="" type="text" name="" id="datetime" placeholder="Date"></div>
+                <div class="col-12 col-md-4">
+                  <input class="" type="text" name="" id="" placeholder="Time"></div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-md-2 col-md-10">
+                  <button type="submit" class="btn btn-primary">
+                    Reserve
+                  </button>
+                </div>
+              </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 
   <footer class="footer">
