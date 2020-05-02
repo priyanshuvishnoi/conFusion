@@ -63,10 +63,8 @@
               >
             </li>
           </ul>
-          <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal" href="">
-              <span class="fa fa-sign-in"></span> Login</a
-            >
+          <span class="navbar-text" id="loginButton">
+            <span class="fa fa-sign-in"></span> Login
           </span>
         </div>
       </div>
@@ -78,7 +76,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h4 class="modal-title">Login</h4>
-            <button type="button" class="close" data-dismiss="modal">
+            <button type="button" class="close" id="loginModalDismissButton">
               &times;
             </button>
           </div>
@@ -118,7 +116,7 @@
                 <button
                   type="button"
                   class="btn btn-secondary btn-sm ml-auto"
-                  data-dismiss="modal"
+                  id="loginCancelButton"
                 >
                   Cancel
                 </button>
@@ -150,8 +148,7 @@
             <a
               role="button"
               class="btn btn-block nav-link btn-warning"
-              data-toggle="modal"
-              data-target="#reserveModal"
+              id="reserveTableButton"
               >Reserve Table</a
             >
           </div>
@@ -164,7 +161,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h4 class="modal-title">Reserve a Table</h4>
-            <button type="button" class="close" data-dismiss="modal">
+            <button type="button" class="close" id="reserveModalDismissButton">
               &times;
             </button>
           </div>
@@ -174,7 +171,7 @@
                 <label for="radio" class="col-12 col-md-2 col-form-label"
                   >Number of Guests</label
                 >
-                <div class="col-12 col-md-10">
+                <div class="col-12 col-md-10 align-self-center">
                   <input class="col-1" type="radio" name="radio" id="radio" />1
                   <input class="col-1" type="radio" name="radio" id="radio" />2
                   <input class="col-1" type="radio" name="radio" id="radio" />3
@@ -184,7 +181,7 @@
                 </div>
               </div>
 
-              <div class="form-group row mt-4">
+              <div class="form-group row align-self-center">
                 <label for="smoke" class="col-12 col-md-2 col-form-label"
                   >Section</label
                 >
@@ -195,7 +192,7 @@
                       name="section"
                       id="option1"
                       autocomplete="off"
-                      checked
+                      active
                     />
                     Non-Smoking
                   </label>
@@ -215,7 +212,7 @@
                 <label for="datetime" class="col-12 col-md-2 col-form-label"
                   >Date and Time</label
                 >
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 align-self-center">
                   <input
                     class=""
                     type="text"
@@ -225,7 +222,7 @@
                   />
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 align-self-center">
                   <input
                     class=""
                     type="text"
@@ -239,10 +236,9 @@
               <div class="form-group row">
                 <div class="offset-md-2 mr-1">
                   <button
-                    type="submit"
+                    type="button"
                     class="btn btn-secondary"
-                    data-toggle="modal"
-                    data-target="#reserveModal"
+                    id="reserveModalCancelButton"
                   >
                     Cancel
                   </button>
@@ -513,6 +509,30 @@
             $("#carouselButton").children("span").removeClass("fa-play");
             $("#carouselButton").children("span").addClass("fa-pause");
           }
+        });
+        //login button script
+        $("#loginButton").click(function () {
+          $("#loginModal").modal("show");
+        });
+        //login modal dismiss button
+        $("#loginModalDismissButton").click(function () {
+          $("#loginModal").modal("hide");
+        });
+        //login modal cancel button
+        $("#loginCancelButton").click(function () {
+          $("#loginModal").modal("hide");
+        });
+        //reserve table button
+        $("#reserveTableButton").click(function () {
+          $("#reserveModal").modal("show");
+        });
+        //reserve modal dismiss button
+        $("#reserveModalDismissButton").click(function () {
+          $("#reserveModal").modal("hide");
+        });
+        //reserve modal cancel button
+        $("#reserveModalCancelButton").click(function () {
+          $("#reserveModal").modal("hide");
         });
       });
     </script>
